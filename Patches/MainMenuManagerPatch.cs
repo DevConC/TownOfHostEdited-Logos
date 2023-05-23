@@ -250,6 +250,7 @@ public class ModNewsHistory
             {
                 if (line.StartsWith("## ")) line = line.Replace("## ", "<b>") + "</b>";
                 else if (line.StartsWith("- ")) line = line.Replace("- ", "・");
+				else if (line.StartsWith("| ")) line = line.Replace("| ", "└");
                 text += $"\n{line}";
             }
         }
