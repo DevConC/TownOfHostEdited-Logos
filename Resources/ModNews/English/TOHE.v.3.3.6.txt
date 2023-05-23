@@ -1,0 +1,26 @@
+#Number:100320
+#Title:TownOfHostEdited-Logos v3.3.6
+#SubTitle:/\TOHE is still alive and will live!\/
+#ShortTitle:→TOHE-L v3.3.6
+#Date:2023-5-23T00:00:00Z
+#-----------------------------
+When the original TOHE developer left the project, other people (SolarFlare, Loonie, me (trying) and others) still continue to make new versions of the mod. About me (ÐevCøn) - Im zero at programming, but I also trying to make a contribution for this plugin.
+Good luck for us!
+
+## Base
+- Base on TOHE v2.3.6
+
+## Deletion
+- Option: Deleted "Disable Tasks" from "Disable" tab because added new tab "Task Management"
+
+## New Feature
+- The News on Russian
+- Option: Added new tab "Task Management" with 4 options: "Disable Short Tasks", "Disable Common Tasks", "Disable Long Tasks", "Disable Other Tasks".
+| If you turn off absolutely all common tasks and add at least 1 common task in game settings, the game will be soft locked, so just save at least 1 common task turned on in "Task Manegement" tab.
+| If you turn off all short and/or long tasks and the game won't be able to add at least 1 task, the game will be also soft locked, so just save at least 1 task turned on in "Task Manegement" tab.
+	
+## Role Changing
+- The Bard have a chance to replace Arrogance with 50% if option "Disable Secret Roles" turned off.
+- The Sunny Boy have a chance to replace Jester with 50% if option "Disable Secret Roles" turned off.
+- The Konan have a chance to replace Terrorist with 50% if option "Disable Secret Roles" turned off.
+| Despite the fact that she belongs to Neutral roles and you can get this role, there's no function scripts at all, so you can't win as Konan.
