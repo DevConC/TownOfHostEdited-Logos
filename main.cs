@@ -16,29 +16,29 @@ using UnityEngine;
 [assembly: AssemblyVersion(TOHE.Main.PluginVersion)]
 namespace TOHE;
 
-[BepInPlugin(PluginGuid, "TOHE", PluginVersion)]
+[BepInPlugin(PluginGuid, "TOHE-L", PluginVersion)]
 [BepInIncompatibility("jp.ykundesu.supernewroles")]
 [BepInProcess("Among Us.exe")]
 public class Main : BasePlugin
 {
-    // == プログラム設定 / Program Config ==
-    public static readonly string ModName = "TOHE";
-    public static readonly string ModColor = "#ffc0cb";
+    // == Конфигурация Плагина / Program Config ==
+    public static readonly string ModName = "TOHE-Logos";
+    public static readonly string ModColor = "#20155e";
     public static readonly bool AllowPublicRoom = true;
-    public static readonly string ForkId = "TOHE";
-    public const string OriginalForkId = "OriginalTOH";
+    public static readonly string ForkId = "TOHE-L";
+    public const string OriginalForkId = "OriginalTOHE";
     public static HashAuth DebugKeyAuth { get; private set; }
     public const string DebugKeyHash = "c0fd562955ba56af3ae20d7ec9e64c664f0facecef4b3e366e109306adeae29d";
     public const string DebugKeySalt = "59687b";
     public static ConfigEntry<string> DebugKeyInput { get; private set; }
-    public static readonly string MainMenuText = "为什么有人会觉得别人该为自己付出呢？";
-    public const string PluginGuid = "com.karped1em.townofhostedited";
-    public const string PluginVersion = "2.3.6";
+    public static readonly string MainMenuText = "\n\n<size=200%>More functions, less bugs! (planned)</size>";
+    public const string PluginGuid = "com.devconc.townofhostedited-logos";
+    public const string PluginVersion = "3.3.6";
     public const int PluginCreate = 8;
 
     public static readonly bool ShowQQButton = false;
     public static readonly string QQInviteUrl = "https://jq.qq.com/?_wv=1027&k=2RpigaN6";
-    public static readonly bool ShowDiscordButton = false;
+    public static readonly bool ShowDiscordButton = true;
     public static readonly string DiscordInviteUrl = "https://discord.gg/hkk2p9ggv4";
 
     public Harmony Harmony { get; } = new Harmony(PluginGuid);
@@ -138,6 +138,7 @@ public class Main : BasePlugin
     public static Dictionary<byte, int> VeteranNumOfUsed = new();
     public static Dictionary<byte, long> GrenadierBlinding = new();
     public static Dictionary<byte, long> MadGrenadierBlinding = new();
+	public static Dictionary<byte, long> DarkDarkness = new();
     public static Dictionary<byte, int> CursedWolfSpellCount = new();
     public static int AliveImpostorCount;
     public static bool isCursed;
@@ -187,7 +188,7 @@ public class Main : BasePlugin
         Instance = this;
 
         //Client Options
-        HideName = Config.Bind("Client Options", "Hide Game Code Name", "TOHE");
+        HideName = Config.Bind("Client Options", "Hide Game Code Name", "TOHE-L");
         HideColor = Config.Bind("Client Options", "Hide Game Code Color", $"{ModColor}");
         DebugKeyInput = Config.Bind("Authentication", "Debug Key", "");
         UnlockFPS = Config.Bind("Client Options", "UnlockFPS", false);
@@ -441,6 +442,7 @@ public enum CustomRoles
     Bard,
     Swooper,
     Crewpostor,
+	Dark,
     //Crewmate(Vanilla)
     Engineer,
     GuardianAngel,
